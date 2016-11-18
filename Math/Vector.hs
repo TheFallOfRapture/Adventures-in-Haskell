@@ -18,4 +18,4 @@ instance (Num a) => Num (Vector a) where
     Vector (x1, y1, z1) * Vector (x2, y2, z2) = Vector (x1 * x2, y1 * y2, z1 * z2)
     abs v = fmap abs v
     signum v = fmap signum v
-    fromInteger x = Vector (fromInteger x, fromInteger x, fromInteger x)
+    fromInteger x = pure $ fromInteger x
